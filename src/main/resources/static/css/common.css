@@ -1,0 +1,111 @@
+.mybar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 2.2rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #2387e5;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.mybar:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+.mybar .button {
+  position: relative;
+  top: 0.35rem;
+  z-index: 20;
+  margin-top: 0;
+  font-weight: 400;
+}
+.mybar .button.pull-right {
+  margin-left: 0.5rem;
+}
+.mybar .button.pull-left {
+  margin-right: 0.5rem;
+}
+.mybar .button-link {
+  top: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  line-height: 2.2rem;
+  height: 2.2rem;
+  color: #f7f7f8;
+  border: 0;
+}
+.mybar .button-link:active,
+.mybar .button-link.active {
+  color: #0675bb;
+}
+.mybar .button-block {
+  top: 0.35rem;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.mybar .button-nav.pull-left {
+  margin-left: -0.25rem;
+}
+.mybar .button-nav.pull-left .icon-left-nav {
+  margin-right: -0.15rem;
+}
+.mybar .button-nav.pull-right {
+  margin-right: -0.25rem;
+}
+.mybar .button-nav.pull-right .icon-right-nav {
+  margin-left: -0.15rem;
+}
+.mybar .icon {
+  position: relative;
+  z-index: 20;
+  padding: .5rem .1rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.mybar .button .icon {
+  padding: 0;
+}
+.mybar .title .icon {
+  padding: 0;
+}
+.mybar .title .icon.icon-caret {
+  top: 0.2rem;
+  margin-left: -0.25rem;
+}
+.mybar-footer .icon {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+.mybar input[type="search"] {
+  height: 1.45rem;
+  margin: 0.3rem 0;
+}
+.mytitle {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 -0.5rem;
+  font-size: 0.90rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #f7f7f8;
+  text-align: center;
+  white-space: nowrap;
+}
+.mytitle a {
+  color: inherit;
+}
