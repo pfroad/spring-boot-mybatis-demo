@@ -109,3 +109,9 @@
 .mytitle a {
   color: inherit;
 }
+
+.mycontent-block {
+  padding-top: 0 .75rem;
+  margin-top: 2.75rem;
+  color: #6d6d72;
+}
