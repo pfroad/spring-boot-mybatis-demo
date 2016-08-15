@@ -11,4 +11,8 @@ import java.lang.annotation.Target;
 @Inherited
 public @interface Column {
 	String columnName();
+	
+	boolean updatable() default true;
+	
+	boolean nullable() default true;
 }

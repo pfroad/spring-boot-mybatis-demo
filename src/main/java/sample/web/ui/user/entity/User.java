@@ -2,7 +2,12 @@ package sample.web.ui.user.entity;
 
 import java.io.Serializable;
 
+import sample.web.ui.annotations.PrimaryKey;
+import sample.web.ui.annotations.Table;
+
+@Table(tableName = "user")
 public class User implements Serializable {
+	@PrimaryKey
 	private Long id;
 	private String username;
 	private String password;
