@@ -56,7 +56,7 @@ abstract public class AbstractSqlProvider<T, PK extends Serializable> {
 					Column column = field.getAnnotation(Column.class);
 					
 					if (field.get(t) == null) {
-						if (!column.nullable()) {
+						if (column != null && !column.nullable()) {
 							throw new Exception(column.columnName() + " cannot be nullable!");
 						} else {
 							continue;
@@ -89,7 +89,7 @@ abstract public class AbstractSqlProvider<T, PK extends Serializable> {
 					
 					Column column = field.getAnnotation(Column.class);
 					
-					if (!column.updatable()) continue;
+					if (column != null && !column.updatable()) continue;
 					
 					SET(column + " = #{" + field.getName() + "}");
 				}

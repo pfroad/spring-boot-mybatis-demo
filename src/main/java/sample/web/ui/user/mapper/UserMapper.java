@@ -1,5 +1,7 @@
 package sample.web.ui.user.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -12,7 +14,7 @@ import sample.web.ui.user.provider.UserSqlProvider;
 @Mapper
 public interface UserMapper {
 	@Select("select * from user where username = #{username}")
-	User findByUsername(@Param("username") String username);
+	List<User> findByUsername(@Param("username") String username);
 	
 	@InsertProvider(type = UserSqlProvider.class, method = "insertSql")
 	int save(User user);
