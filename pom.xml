@@ -69,7 +69,28 @@
         <dependency>
 		  <groupId>org.apache.httpcomponents</groupId>
 		  <artifactId>httpclient</artifactId>
-		  <version>4.5.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.airparking.app</groupId>
+			<artifactId>sharepark</artifactId>
+			<version>1.3.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mybatis</groupId>
+					<artifactId>mybatis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mybatis</groupId>
+					<artifactId>mybatis-spring</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.s515.rpc</groupId>
+		    <artifactId>spring-rpc</artifactId>
+		    <version>1.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
