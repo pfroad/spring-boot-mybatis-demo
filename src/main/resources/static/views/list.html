@@ -38,15 +38,28 @@
 			<div class="tabs pull-to-refresh-container">
 				<div id="tab1" class="tab active">
 				<div class="mycontent-block">
+				<div class="content-block-title">请输入车牌号</div>
 				<div class="list-block">
 				<ul>
 					<!-- Text inputs -->
 					<li>
-						<div class="item-content">
-							<div class="item-inner">
-								<div class="item-title label">车牌号</div>
-								<div class="item-input">
-									<input type="text" placeholder="车牌号">
+						<div class="row">
+							<div class="col-33">
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" id="plateNoPrefix" class="plateno-select" placeholder="选择车牌">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-70">
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" placeholder="请输入车牌号" id="plateNo">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -176,7 +189,7 @@
 			}, function(resp) {
 				$.alert("系统错误，请稍后重试！", "错误提醒");
 			}) */
-			apms.ajaxGet("/user/list", 'username=test4', function(resp) {
+			/* apms.ajaxGet("/user/list", 'username=test4', function(resp) {
 				var str = "";
 				for (var i=0; i< resp.length; i++) {
 					str = str + resp[i]['id'] + "," + resp[i]['username'] + ";";
@@ -184,7 +197,24 @@
 				$.alert(str);
 			}, function(resp) {
 				$.alert("系统错误，请稍后重试！", "错误提醒");
-			})
+			}) */
+		});
+		$("#plateNoPrefix").picker({
+		  toolbarTemplate: '<header class="bar bar-nav">' + 
+		  /* <button class="button button-link pull-left">Button</button>\ */
+		  '<button class="button button-link pull-right close-picker">OK</button>' + 
+		  '<h1 class="title">车牌号</h1>' + 
+		  '</header>',
+		  cols: [
+		    {
+		      textAlign: 'center',
+		      values: ["粤","京","津","沪","渝","冀","豫","云","辽","黑","湘","皖","鲁","苏","赣","浙","鄂","桂","甘","晋","蒙","陕","吉","闽","贵","青","藏","川","宁","新","琼"]
+		    },
+		    {
+		      textAlign: 'center',
+		      values: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+		    }
+		  ]
 		});
 	</script>
 </body>
